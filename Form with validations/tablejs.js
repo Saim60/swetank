@@ -13,8 +13,7 @@ var x = 0;
 
 function AddTable() {
     var AddRown = document.getElementById('display');
-    var NewRow = AddRown.insertRow(n)
-        ;
+    var NewRow = AddRown.insertRow(n);
     list1[x] = document.getElementById("salutt").value;
     list2[x] = document.getElementById("name").value;
     list3[x] = document.getElementById("lname").value;
@@ -33,15 +32,12 @@ function AddTable() {
     }
     if (document.getElementById('p1').checked) {
         list9[x] = document.getElementById('p1').value;
-        //  console.log('r',list9[x]);
     }
     if (document.getElementById('p2').checked) {
-        list9[x] = document.getElementById('p2').value;
-        //  console.log('r',list9[x]);
+        list9[x] = document.getElementById('p2').value; 
     }
     if (document.getElementById('p3').checked) {
         list9[x] = document.getElementById('p3').value;
-        //  console.log('r',list9[x]);
     }
 
 
@@ -73,47 +69,47 @@ function validateForm() {
     var fname = document.getElementById("name").value;
 
     if (fname == null || fname == "") {
-        errorr.innerHTML = "<span style='color: red;'>" +
+        firstnameError.innerHTML = "<span style='color: red;'>" +
             "Please enter a valid name</span>"
     }
     else if (fname.length < 3) {
-        errorr.innerHTML = "<span style='color: red;'>" +
+        firstnameError.innerHTML = "<span style='color: red;'>" +
             "Please enter at least 3 digit</span>"
     }
     else if (!isNaN(fname)) {
-        errorr.innerHTML = "<span style='color: red;'>" +
+        firstnameError.innerHTML = "<span style='color: red;'>" +
             "Name should not be in digit</span>"
     }
     else {
-        errorr.innerHTML = ""
+        firstnameError.innerHTML = ""
     }
 
     var lname = document.getElementById("lname").value;
 
     if (lname == null || lname == "") {
-        errorrr.innerHTML = "<span style='color: red;'>" +
+        lastNameError.innerHTML = "<span style='color: red;'>" +
             "Please enter a valid name</span>"
     }
     else if (lname.length < 3) {
-        errorrr.innerHTML = "<span style='color: red;'>" +
+        lastNameError.innerHTML = "<span style='color: red;'>" +
             "Please enter at least 3 digit</span>"
     }
     else if (!isNaN(lname)) {
-        errorrr.innerHTML = "<span style='color: red;'>" +
+        lastNameError.innerHTML = "<span style='color: red;'>" +
             "Name should not be in digit</span>"
     }
     else {
-        errorrr.innerHTML = ""
+        lastNameError.innerHTML = ""
     }
 
     var email = document.forms["index"]["email"].value;
     var at = email.indexOf("@");
     var dot = email.lastIndexOf(".");
     if (at < 1 || dot < at + 2 || dot + 2 >= email.lenght) {
-        errorrrr.innerHTML = "<span style='color: red;'>" +
+        emailError.innerHTML = "<span style='color: red;'>" +
             "Please enter a valid email</span>"
     } else {
-        errorrrr.innerHTML = ""
+        emailError.innerHTML = ""
     }
 
     var phone = document.forms["index"]["phone"].value;
